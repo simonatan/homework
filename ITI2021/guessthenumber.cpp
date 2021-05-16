@@ -55,12 +55,6 @@ int main()
                 ch=num2%10;
                 switch (ch)
                 {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 7: circle+=0; break;
                     case 6:
                     case 9:
                     case 0: circle+=1; break;
