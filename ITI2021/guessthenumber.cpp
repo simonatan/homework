@@ -24,27 +24,27 @@ int main()
     }
    
     int num = rand() % (maxLimit-minLimit +1) + minLimit; //random number between minLimit and maxLimit
-    cout << "Guess My Number Game\n\n"; //izwejda neshtata w kawichkite
+    cout << "Guess My Number Game\n\n";
 
-    int guess = 0; //deklarira promenliwa guess sys stojnost 0
+    int guess = 0;
     
-    while (guess != num) { // cikyl while, kojto ima uslowie - dokato guess ne e rawen na random number-a, kojto kompyutyra e generiral
-        cout << "Enter a guess between "<<minLimit<<" and "<<maxLimit<<": "; //izwejda neshtata w kawichkite
+    while (guess != num) { 
+        cout << "Enter a guess between "<<minLimit<<" and "<<maxLimit<<": ";
         
-        cin >> guess; // potrebitelq wywejda tehniq guess
+        cin >> guess;
         times++;
         
         if(guess==0) break;
 
-        if (guess > num) { // kogato guess e po-golqmo ot num
-            cout << "Too high!\n\n"; // izwejda neshtata w kawichkite
+        if (guess > num) { 
+            cout << "Too high!\n\n";
         }
-        else if (guess < num) // kogato guess e po-malko ot num
+        else if (guess < num)
             {
-                cout << "Too low!\n\n"; //izwejda neshtata w kawichkite
+                cout << "Too low!\n\n"; 
             }
         else {
-            cout << "\nCorrect! You got it in "<<times<<" tries\n"; //izwejda neshtata w kawichkite - chisloto ne e nito po-malko, nito po-golqmo sledowatelno edinstwenoto neshto, koeto ostawa e da num e rawno na guess
+            cout << "\nCorrect! You got it in "<<times<<" tries\n";
         }
         
         if(times==5)
