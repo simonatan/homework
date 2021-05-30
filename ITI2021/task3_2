@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int lines;
+
+    cout<<"Enter the number of lines (5-15): ";
+    cin>>lines;
+
+    while(lines<5 || lines>15)
+    {
+      cout<<"The number of lines has to be between 5 and 15!\nEnter again: ";
+      cin>>lines;
+    }
+
+    for(int i=0; i<lines; i++)
+    {
+        for(int j=lines-i; j>0; j--)
+        {
+            cout<<j<<" ";
+        }
+        for(int k=2; k<=lines-i; k++)
+        {
+            cout<<k<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
