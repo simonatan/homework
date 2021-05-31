@@ -7,10 +7,13 @@ int main()
 {
     srand(time(0));
     
-    int digit, times = 1, bulls, cows, hint, reveal;
+    int digit, times = 1, bulls, cows, hint, reveal, game=2;
     
     cout<<"Bulls and cows\n\nRules:\nAll digits of the secret number are different.\nThe secret number can't start with a zero.\nIf the guess has matching digits in the right places they are bulls.\nIf they match but aren't in the exact places they are cows.\n\nExample:\nsecret number: 2479\nguess: 8491 - 1 bull and 1 cow\n\n";
     
+    while(game==2)
+    {
+        times = 1;
     cout<<"How many digits would you like to play with? (2, 3, 4)\n";
     cin>>digit;
         
@@ -59,7 +62,8 @@ int main()
 
             if(guess4==0)
             {
-                cout<<"The secret number was "<<secretnum4<<".\n";
+                cout<<"The secret number was "<<secretnum4<<".\n\nWanna try again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
 
@@ -75,7 +79,8 @@ int main()
 
             if(guess4==secretnum4)
             {
-                cout<<"You guessed the number!\n";
+                cout<<"You guessed the number!\n\nWanna play again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
             else
@@ -149,7 +154,8 @@ int main()
 
             if(guess3==0)
             {
-                cout<<"The secret number was "<<secretnum3<<".\n";
+                cout<<"The secret number was "<<secretnum3<<".\n\nWanna try again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
 
@@ -165,7 +171,8 @@ int main()
 
             if(guess3==secretnum3)
             {
-                cout<<"You guessed the number!\n";
+                cout<<"You guessed the number!\n\nWanna play again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
             else
@@ -229,7 +236,8 @@ int main()
 
             if(guess2==0)
             {
-                cout<<"The secret number was "<<secretnum2<<".\n";
+                cout<<"The secret number was "<<secretnum2<<".\n\nWanna try again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
                 
@@ -245,7 +253,8 @@ int main()
                 
             if(guess2==secretnum2)
             {
-                cout<<"You guessed the number!\n";
+                cout<<"You guessed the number!\n\nWanna play again? no(1) yes(2)\n";
+                cin>>game;
                 break;
             }
             else
@@ -275,6 +284,8 @@ int main()
             times++;
         }
     }
+    }
 
     return 0;
 }
+
