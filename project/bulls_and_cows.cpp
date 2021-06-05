@@ -11,8 +11,7 @@ bool DifferentDigits(int x)
     if(arr[x%10]==true) return 1;
     else arr[x%10]=true;
     x/=10;
-  }
-    
+  }  
 return 0;
 }
 void BullsAndCows(int digit,int A[], int B[])
@@ -118,7 +117,7 @@ int main()
                 {
                     Hint(secret4digits);
                 }
-            times++;
+                times++;
             }
         }
         else if(digit==3)
