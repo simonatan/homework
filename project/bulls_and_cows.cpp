@@ -35,13 +35,30 @@ void BullsAndCows(int digit,int A[], int B[])
     if(cows==1) cout<<cows<<" cow"<<endl;
     else cout<<cows<<" cows"<<endl;
 }
+void Hint(int arr[])
+{
+    bool hint;
+    int reveal;
+    
+    cout<<"Hint? no(0) yes(1)\n";
+    cin>>hint;
+    
+    if(hint==true)
+    {
+        cout<<"Which digit would you like to reveal?\n";
+        cin>>reveal;
+        
+        cout<<"The "<<reveal<<" digit is ";
+        cout<<arr[reveal-1]<<".\n";
+    }
+}
 
 int main()
 {
     srand(time(0));
     
-    int digit, times, bulls, cows, reveal;
-    bool game=1, hint;
+    int digit, times;
+    bool game=1;
     
     cout<<"Bulls and cows\n\nRules:\nAll digits of the secret number are different.\nThe secret number can't start with a zero.\nIf the guess has matching digits in the right places, they are bulls.\nIf they match but aren't in the exact places, they are cows.\nIf you want to give up, enter 0.\n\nExample:\nsecret number: 2479\nguess: 8491 - 1 bull and 1 cow\n\n";
     
@@ -99,17 +116,7 @@ int main()
                 
                 if(times==8)
                 {
-                    cout<<"Hint? no(0) yes(1)\n";
-                    cin>>hint;
-                    
-                    if(hint==true)
-                    {
-                        cout<<"Which digit would you like to reveal?\n";
-                        cin>>reveal;
-                        
-                        cout<<"The "<<reveal<<" digit is ";
-                        cout<<secret4digits[reveal-1]<<".\n";
-                    }
+                    Hint(secret4digits);
                 }
             times++;
             }
@@ -160,24 +167,14 @@ int main()
                 
                 if(times==5)
                 {
-                    cout<<"Hint? no(0) yes(1)\n";
-                    cin>>hint;
-                    
-                    if(hint==true)
-                    {
-                        cout<<"Which digit would you like to reveal?\n";
-                        cin>>reveal;
-                        
-                        cout<<"The "<<reveal<<" digit is ";
-                        cout<<secret3digits[reveal-1]<<".\n";
-                    }
+                    Hint(secret3digits);
                 }
                 times++;
             }
         }
         else
         {
-            int secretnum2, secret2digits[2], guess2digits[2], guess2;
+            int secretnum2=rand()%90+10, secret2digits[2], guess2digits[2], guess2;
         
             cout<<"\nYou'll be allowed a hint after the 3th guess where your chosen digit will be revealed.\n\n";
         
@@ -219,17 +216,7 @@ int main()
                 
                 if(times==3)
                 {
-                    cout<<"Hint? no(0) yes(1)\n";
-                    cin>>hint;
-                    
-                    if(hint==true)
-                    {
-                        cout<<"Which digit would you like to reveal?\n";
-                        cin>>reveal;
-                        
-                        cout<<"The "<<reveal<<" digit is ";
-                        cout<<secret2digits[reveal-1]<<".\n";
-                    }
+                    Hint(secret2digits);
                 }
                 times++;
             }
