@@ -21,10 +21,12 @@ void BullsAndCows(int digit, int secretnum[], int guess[])
     for(int i=0; i<digit; i++)
     {
         if(secretnum[i]==guess[i]) bulls++;
-
-        for(int j=0; j<digit; j++)
+        else
         {
-            if(j!=i && secretnum[i]==guess[j]) cows++;
+            for(int j=0; j<digit; j++)
+            {
+                if(j!=i && secretnum[i]==guess[j]) cows++;
+            }
         }
     }
     
