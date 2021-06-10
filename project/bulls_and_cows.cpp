@@ -2,29 +2,29 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-bool DifferentDigits(int x)
+bool DifferentDigits(int number)
 {
   bool arr[10]={false};
 
-  while(x!=0)
+  while(number!=0)
   {
-    if(arr[x%10]==true) return 1;
-    else arr[x%10]=true;
-    x/=10;
-  }  
+    if(arr[number%10]) return 1;
+    else arr[number%10]=true;
+    number/=10;
+  }
 return 0;
 }
-void BullsAndCows(int digit,int A[], int B[])
+void BullsAndCows(int digit, int secretnum[], int guess[])
 {
     int bulls=0, cows=0;
     
     for(int i=0; i<digit; i++)
     {
-        if(A[i]==B[i]) bulls++;
+        if(secretnum[i]==guess[i]) bulls++;
 
         for(int j=0; j<digit; j++)
         {
-            if(j!=i && A[i]==B[j]) cows++;
+            if(j!=i && secretnum[i]==guess[j]) cows++;
         }
     }
     
@@ -34,7 +34,7 @@ void BullsAndCows(int digit,int A[], int B[])
     if(cows==1) cout<<cows<<" cow"<<endl;
     else cout<<cows<<" cows"<<endl;
 }
-void Hint(int arr[])
+void Hint(int secretnum[])
 {
     bool hint;
     int reveal;
@@ -48,7 +48,7 @@ void Hint(int arr[])
         cin>>reveal;
         
         cout<<"The "<<reveal<<" digit is ";
-        cout<<arr[reveal-1]<<".\n";
+        cout<<secretnum[reveal-1]<<".\n";
     }
 }
 
