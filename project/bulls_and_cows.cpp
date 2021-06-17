@@ -6,7 +6,7 @@ bool DifferentDigits(int number)
 {
   bool arr[10]={false};
 
-  while(number!=0)
+  while(number)
   {
     if(arr[number%10]) return 1;
     else arr[number%10]=true;
