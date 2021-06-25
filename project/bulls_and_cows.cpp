@@ -84,7 +84,7 @@ int main()
 
                 while((guess4>9999 || guess4<1000) && guess4!=0)
                 {
-                    cout<<"Oops! Remember you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
+                    cout<<"Oops! Remember, you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
                     cin>>guess4;
                 }
 
@@ -137,7 +137,7 @@ int main()
 
                 while((guess3>999 || guess3<100) && guess3!=0)
                 {
-                    cout<<"Oops! Remember you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
+                    cout<<"Oops! Remember, you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
                     cin>>guess3;
                 }
 
@@ -188,7 +188,7 @@ int main()
 
                 while((guess2>99 || guess2<10) && guess2!=0)
                 {
-                    cout<<"Oops! Remember you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
+                    cout<<"Oops! Remember, you're playing with "<<digit<<" digits.\nRe-enter guess No."<<times<<": ";
                     cin>>guess2;
                 }
 
